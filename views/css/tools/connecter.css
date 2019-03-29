@@ -1,0 +1,97 @@
+#message {
+  position: absolute;
+  left: -200px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+#success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+#formUser {
+  width: 350px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+  height: 70vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background: #e4e4e5; */
+  background: rgb(215, 247, 255);
+  animation: animetop 0.3s steps(20);
+}
+
+#formUser span {
+  position: relative;
+  text-shadow: 1px 1px 1px #f00;
+  top: -15px;
+  position: absolute;
+  z-index: 5;
+  color: #f00;
+}
+
+@keyframes animetop {
+  from{
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#auth input {
+  /* border-bottom: 1px solid #0d1b2b; */
+  width: 200px;
+  height: 40px;
+  background: #f4f4f4;
+  color: #0d1b2b;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+#auth {
+  position: relative;
+  top: -30px;
+}
+
+#formUser h2 {
+  color:  #7cd3f3;
+  position: relative;
+  top: -80px;
+}
+
+#auth div {
+  margin-bottom: 10px;
+}
+
+#formUser button {
+  position: relative;
+  top: 20px;
+  color: #fff;
+  background: #7cd3f3;
+  height: 40px;
+  padding: 10px;
+}
+
+
+@media screen and (max-width: 695px) {
+  #formUser {
+    width: 260px;
+  }
+}

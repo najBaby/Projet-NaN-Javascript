@@ -1,0 +1,25 @@
+<form action="user/inscrire" method="post" id="formRegister">
+  <h2>S'INSCRIRE</h2>
+  <div class="regis">
+    <input type="text" name="nom" placeholder="Entrez un pseudo">
+    <input type="password" name="nom" placeholder="Entrez un mot de passe">
+    <input type="text" name="numero" placeholder="Entrez un numero">
+    <input type="text" name="ville" placeholder="Entrez votre ville">
+    <input type="text" name="commune" placeholder="Entrez votre commune">
+  </div>
+  <div class="button">
+    <button type="submit" name="button">S'INSCRIRE</button>
+  </div>
+</form>
+
+<script>
+  $(document).ready(function () {
+    $("#formRegister").submit(function (e) {
+      e.preventDefault();
+      let data = $(this).serialize();
+      $.post("/user/registre", data, function (d, status, jqXHR) {
+        $("#err_pseudo").append(d.message)
+      })
+    })
+  })
+</script>

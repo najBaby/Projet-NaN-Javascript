@@ -1,0 +1,55 @@
+{
+  "name": "server_web",
+  "version": "1.0.1",
+  "description": "Restaurant en ligne",
+  "main": "",
+  "private": true,
+  "scripts": {
+    "start": "ts-node-dev src/index.ts",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "author": "NajBaby",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/jsonwebtoken": "^8.3.2",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.4",
+    "ts-loader": "^5.3.3",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "^3.3.3333",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.3"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "async": "^2.6.2",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "class-validator": "^0.9.1",
+    "cookie-parser": "^1.4.4",
+    "crypto": "^1.0.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "jade": "^1.11.0",
+    "jsonwebtoken": "^8.5.0",
+    "mysql": "^2.16.0",
+    "twig": "^1.13.2",
+    "typeorm": "^0.2.15-rc.2",
+    "vue": "^2.5.11"
+  }
+}

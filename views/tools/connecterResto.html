@@ -1,0 +1,62 @@
+<form id="formUser" >
+  <div id="message">
+  </div>
+  <h2>CONNECTEZ-VOUS</h2>
+  <div id="auth">
+    <div class="pseudo">
+      <input type="text" id="pseudo" name="nom" placeholder="Votre pseudo">
+    </div>
+    <div class="password">
+      <input type="password" id="password" name="password" placeholder="Votre mot de passe">
+    </div>
+  </div>
+  <div id="success">
+  </div>
+  <div class="button">
+    <button id="submit" type="submit">SE CONNECTER</button>
+  </div>
+</form>
+
+<script>
+$(document).ready(function () {
+  $("#formUser").submit(function (e) {
+    e.preventDefault();
+    $("#message").css("display", "none")
+    let data = $(this).serialize();
+    $.post("/seLogin/restaurateur", data, function (d, status, jqXHR) {
+      if(d.message)
+        $("#message").css("display", "flex").css("backgroundColor", "red").empty().append(d.message)
+      else
+        $("#success").css("backgroundColor", "green").empty().append(d.success)
+    })
+  })
+})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 40 40" width="40" height="50" fill="#aaa" >
+<ellipse cx="20" cy="13" rx="3"ry="5"/>
+<path d="M10,35 Q10,25 20,24 Q31,25 30,35 Z"/>
+</svg> -->

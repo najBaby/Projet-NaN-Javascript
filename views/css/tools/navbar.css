@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+  font-family: verdana;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+#navbar, nav, nav ul, #choix, #choix ul, #menu, #menu ul, #responsive ul {
+  display: flex;
+}
+
+#navbar, nav, #choix, #menu, #responsive, #responsive ul{
+  width: 100%;
+  align-items: center;
+}
+
+#navbar {
+  box-shadow: 1px 1px 1px #444;
+  background: #fff;
+}
+
+nav {
+  border-bottom: 2px solid #eee;
+}
+
+#choix {
+  height: 50px;
+}
+
+nav {
+  height: 80px;
+}
+
+#responsive {
+  height: 70px;
+  display: none;
+  border: 2px solid #eee;
+}
+#navbar a {
+  font-size: 14px;
+  /* color: #0d1b2b; */
+  transition: 0.05s;
+  color: #555;
+}
+
+
+#title {
+  color: #7cd3f3;
+}
+
+#navbar a:hover {
+  color: #7cd3f3;
+}
+
+#navbar a:visited {
+  text-decoration: underline;
+}
+#choix li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+nav li {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+#menu {
+  display: none;
+}
+
+#navbar, #menu ul {
+  flex-direction: column;
+}
+
+nav, nav ul, #choix ul {
+  flex-direction: row;
+}
+
+nav, #choix {
+  justify-content: center;
+}
+
+nav ul, #choix ul {
+  justify-content: space-around;
+}
+
+#responsive ul {
+  justify-content: flex-end;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+#responsive span {
+  display: block;
+  height: 1px;
+  width: 20px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background: #000;
+}
+
+@media screen and (max-width: 830px) {
+  #responsive {
+    display: flex;
+  }
+  nav {
+    display: none;
+  }
+
+
+  #title {
+    margin-right: 80px;
+  }
+
+  #choix {
+    height: 30px;
+  }
+
+  #hover:focus #menu {
+    display: flex;
+  }
+
+}

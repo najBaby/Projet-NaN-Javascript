@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/tools/navbar.css">
+    <link rel="stylesheet" href="/css/tools/inscrire.css">
+    <script src="/js/jquery/jquery-3.3.1.js"></script>
+    {% import "./tools/navbar.html" as navbar %}
+  </head>
+  <body>
+    <div id="head">
+      {{navbar.navbar('/', 'restaurateur', "client", active)}}
+      <div id="formulaire">
+        <div id="message">
+
+        </div>
+        <h2>INSCRIVEZ-VOUS RESTO</h2>
+        <form method="post" id="form">
+          <div class="">
+            <input type="text" name="nom" placeholder="Entrez le nom du Resto">
+          </div>
+          <div class="">
+            <input type="password" name="password" placeholder="Entrez un mot de passe">
+          </div>
+          <div class="">
+            <input type="text" name="ville" placeholder="Votre ville">
+          </div>
+          <div class="">
+            <input type="text" name="commune" placeholder="Votre commune">
+          </div>
+          <div class="">
+            <input type="text" name="proprietaire" placeholder="Entrez le nom du proprietaire">
+          </div>
+          <div class="">
+            <input type="text" name="email" placeholder="Entrez un email">
+          </div>
+          <div class="">
+            <input type="text" name="numero" placeholder="Entrez un numero">
+          </div>
+          <button type="submit" name="button">S'INSCRIRE</button>
+        </form>
+      </div>
+    </div>
+    <script>
+    $(document).ready(function () {
+      $("#form").submit(function (e) {
+        e.preventDefault();
+        let data = $(this).serialize();
+        $.post("/register/restaurateur", data, function (d, status, jqXHR) {
+          if(d.message)
+            $("#message").css("display", "flex").css("backgroundColor", "red").empty().append(d.message)
+          else
+            $("#message").css("display", "flex").css("backgroundColor", "green").empty().append(d.success)
+        })
+      })
+
+      let message = document.getElementById("message")
+      let success = document.getElementById("success")
+      window.onclick = function (e) {
+        if(e.target != message) {
+          message.style.display = "none"
+        } else if (e.target != success) {
+          success.style.display = "none"
+        }
+      }
+    })
+  </script>
+  </body>
+</html>

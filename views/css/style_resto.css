@@ -1,0 +1,163 @@
+#login {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+#wrapper, #presentation, #theorie {
+  display: flex
+}
+
+#wrapper h3, #wrapper h2 {
+  color: #7cd3f3;
+  margin-bottom: 10px; 
+}
+
+#wrapper {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  background: url("/image/food.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#presentation {
+  margin-top: 10px;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+#theorie {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  flex-direction: row;
+}
+
+#presentation h2 {
+  margin-top: 40px;
+}
+
+#theorie div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 400px;
+  height: 300px;
+  background: #ddd;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#presentation h3 {
+  font-size: 18px;
+}
+
+#presentation h5 {
+  color: #888;
+  font-size: 13px;
+}
+
+#theorie h3, #theorie h5 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#restaurant_marseille {
+  width: 83%;
+  background: url("/image/marseille.jpg");
+  background-size: cover;
+  height: 30vh;
+}
+
+#experience {
+  margin-top: 50px;
+   display: flex;
+   justify-content: space-around;
+   flex-flow: row wrap;
+   width: 100%;
+}
+
+#photo {
+  background: url("/image/chinoise.jpg");
+  background-size: contain;
+  width: 500px;
+  height: 70vh;
+}
+
+#these {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 500px;
+  height: 70vh;
+}
+
+.optional {
+  width: 100%;
+  height: 50vh;
+  background: rgb(215, 247, 255);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.optional button {
+  width: 150px;
+  height: 50px;
+  background: #7cd3f3;
+}
+
+
+@media screen and (max-width: 700px) {
+  #theorie {
+    flex-direction: column;
+  }
+
+  #theorie div {
+    width: 250px;
+    height: 250px;
+
+  }
+
+  #theorie h3 {
+    font-size: 13px;
+  }
+
+  #theorie h5 {
+    font-size: 10px;
+  }
+
+  #theorie h3, #theorie h5 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  #these p  {
+    font-size: 13px;
+  }
+
+  .optional button  {
+    width: 100px;
+  }
+
+  .optional h3 {
+    font-size: 11px;
+    word-spacing: -2px;
+  }
+}

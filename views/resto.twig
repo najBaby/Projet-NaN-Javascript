@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/style_resto.css">
+    <link rel="stylesheet" href="/css/tools/normalize.min.css">
+    <link rel="stylesheet" href="/css/tools/navbar.css">
+    <link rel="stylesheet" href="/css/tools/connecter.css">
+    <script src="/js/jquery/jquery-3.3.1.js"></script>
+    {% import "./tools/navbar.html" as navbar %}
+  </head>
+  <body>
+    <div id="login">
+    </div>
+  <div id="main">
+    <div id="head">
+      {{navbar.navbar('/restaurateur', 'restaurateur', "client", active)}}
+      <div id="wrapper" >
+        <h2>RESTAURATEURS, DIGITALISEZ-VOUS.</h2>
+        <h3>NE RESTEZ PAS A L'ECART DE LA DIGITALISATION</h3>
+      </div>
+    </div>
+    <div id="presentation">
+      <h2>Bienvenue à MANENA</h2>
+      <div id="theorie">
+        <div>
+          <h3>Dévéloppez votre restaurant</h3>
+          <h5>Nous mettons à votre disposition</h5>
+          <h3>Un site internet</h3>
+          <h3>Un back office de gestion</h3>
+          <h3>Une équipe pour vous accompagner</h3>
+        </div>
+        <div>
+          <h3>Un outil simple d'utilisateur</h3>
+          <h5>Vous pilotez depuis le back office</h5>
+          <h3>Les demandes de reservation</h3>
+          <h3>Les commandes en ligne</h3>
+          <h3>Vos campagnes de communication</h3>
+        </div>
+        <div>
+          <h3>Une pensée pour les restaurateurs</h3>
+          <h5>Gagnez en temps et en production</h5>
+          <h3>Creez un fichier client</h3>
+          <h3>Gagnez de nouveaux clients</h3>
+          <h3>Fidelisez vos clients</h3>
+        </div>
+      </div>
+      <div id="restaurant_marseille">
+
+      </div>
+    </div>
+
+    <div id="experience">
+      <div id="photo">
+
+      </div>
+      <div id="these">
+        <h2>POURQUOI UTILISER MANENA POUR VOTRE RESTAURANT</h2>
+        <h5>Vous êtes restaurateur ?</h5>
+        <p>Vous desirez faire evoluer votre etablissement, avoir de nouveaux clients, fideliser vos clients ?</p>
+        <p>Vous n'avez forcement pas le temps et vous ne savez pas par quoi commencer ?</p>
+        <p><strong>MANENA</strong> vous propose un veritable accompagement dans votre digitalisation. Pas seulement au debut, mais tout au long de notre collaboration.</p>
+        <p>Concretement nous proposons de vous creer un site web à votre image afin de presenter votre restaurant, votre menu, vos actualités et vos services. Sur votre site internet, vos clients pouront drectement commander en ligne, reserver une table et faire une demande de devis pour un repas de groupe.</p>
+      </div>
+    </div>
+
+    <div class="optional">
+      <h3>Abonnez-vous à la newsletter pour profiter de la promotion d'un mois gratuit.</h3>
+      <h1>SUIVEZ-NOUS !!</h1>
+      <button><a href="/register/restaurateur/#form"></a>M'INSCRIRE</button>
+    </div>
+  </div>
+  <script src="/js/indexx.js"></script>
+  <script src="/js/tools/connect.js"></script>
+  </body>
+</html>
+
+<!--
+<svg class="draw svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 40 40" width="30" height="30" fill="#aaa" >
+  <ellipse cx="20" cy="13" rx="3"ry="5"/>
+  <path d="M10,35 Q10,25 20,24 Q31,25 30,35 Z"/>
+</svg> -->

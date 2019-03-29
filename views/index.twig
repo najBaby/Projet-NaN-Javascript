@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html id="html" lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style_user.css">
+    <link rel="stylesheet" href="/css/tools/normalize.min.css">
+    <link rel="stylesheet" href="/css/tools/navbar.css">
+    <link rel="stylesheet" href="/css/tools/connecter.css">
+    <script src="/js/jquery/jquery-3.3.1.js"></script>
+    {% import "./tools/navbar.html" as navbar %}
+  </head>
+  <body>
+    <div id="login">
+    </div>
+  <div id="main">
+    <div id="head">
+      {{navbar.navbar('/', 'client', "restaurateur", active)}}
+      <div id="wrapper">
+        <div id="header">
+          <h1>ON MANGE FACILEMENT</h1>
+          <p>Entrez votre ville et commune pour retrouver les restaurants qui livrent à votre porte</p>
+          <form action="/rechercherResto" method="get">
+            <input type="search" name="ville" placeholder="La ville">
+            <input type="search" name="commune" placeholder="La commune">
+            <button type="submit">GO<svg stroke="#fff" width="12" height="9">
+              <path d="M 0 4.5 L 12 4.5 M 12 4.5 L 6 0 M 12 4.5 L 6 9">
+             </svg></button>
+          </form>
+        </div>
+        <div id="jude">
+
+        </div>
+      </div>
+    </div>
+
+    <div id="top">
+      <h1>NOS PLUS BEAUX RESTOS</h1>
+      <div id="restos">
+        <div class="resto" id="r1">
+
+        </div>
+        <div class="resto" id="r2">
+
+        </div>
+        <div class="resto" id="r3">
+
+        </div>
+        <div class="resto" id="r4">
+
+        </div>
+
+        <div class="resto" id="r5">
+
+        </div>
+
+        <div class="resto" id="r6">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="optional">
+      <h3>Abonnez-vous pour profiter des reductions sur les prix des repas</h3>
+      <h1>SUIVEZ-NOUS !!</h1>
+      <button><a href="/register/client/#form">M'INSCRIRE</a></button>
+    </div>
+    </div>
+    <script src="/js/index.js"></script>
+    <script src="/js/tools/connect.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+<!--
+
+<div class="presentation">
+   <h1>Bienvenue à DaBaLy</h1> -->
+  <!-- <h2>Commandez vos repas en ligne en 2 minutes chrono.</h2>
+  <h2>Trouvez les restaurants à proximité</h2>
+</div>
+<div class="input"> -->
+  <!-- <h3>Decouvrez les restaurants locaux qui livrent à votre porte.</h3> -->
+    <!-- <form class="btn" method="post" action="/rechercherResto" id="rechercherResto" class="search">
+      <div class="w">
+        <input name="ville" placeholder="La ville" type="text">
+        <input name="commune" placeholder="La commune" type="text">
+      </div>
+      <div class="b">
+      <button type="submit" name="button">Chercher</button>
+    </div>
+  </form>
+</div> -->
+
+
+
+<!-- <nav>
+  <ul id="nav">
+    <li id="first">
+      <il id="logo">
+          <a href="/"><img src="/image/livreur_garcon.png" alt="logo"></a>
+
+      </il>
+      <ul id="menu">
+        {{navbar.navbar('/', active)}}
+      </ul>
+    </li>
+    <li id="second">
+        <li><a href="#"><img src="/image/chef.jpg" alt=""></a></li> -->
+        <!-- <li id="user"><a href="/resto"><img src="/image/chef_garcon.png" alt="Les restaurateurs" width="50" height="50"></a></li>
+        <li id="drop"><a href="#">
+          <svg width="30" height="30" fill='none' stroke='#aaa' stroke-width='1'>
+            <path d="M15,3 L15,27 m-7,-5 l7,5 7,-5" >
+          </svg>
+        </a></li>
+    </li>
+  </ul>
+</nav> -->
+
+
+
+
+
+<!-- <svg class="draw svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 40 40" width="30" height="30" fill="#aaa" >
+  <ellipse cx="20" cy="13" rx="3"ry="5"/>
+  <path d="M10,35 Q10,25 20,24 Q31,25 30,35 Z"/>
+</svg> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div id="header">
+      <h2>COMMANDEZ OU RETROUVEZ DES RESTAURANTS PRES DE CHEZ VOUS</h2>
+      <p>Découvrez les restaurants locaux qui livrent à votre porte</p>
+      <form id="rechercher" action="/client" method="post">
+        <input type="search" placeholder="Le nom de la ville" list="villes" name="ville" id="ville" value="">
+        <datalist id="villes" size="2">
+          <option value="Abidjan">Abidjan</option>
+          <option value="Port-Bouet">Port-Bouet</option>
+        </datalist>
+        <input type="search"placeholder="Le nom de la commune"  name="commune" id="commune" value="">
+        <input type="submit"  id="submit" value="rechercher">
+      </form>
+</div> -->
+
+
+
+<!-- <svg width="40px" height="40px" viewBox="6 5 30 30" fill="red">
+    <rect id="main"  class="rect" width="10" height="10" x="10" y="10" />
+    <rect id="main1" class="rect" width="10" height="10" x="22" y="10" />
+    <rect id="main2" class="rect" width="10" height="10" x="10" y="22" />
+    <rect id="main3" class="rect" width="10" height="10" x="22" y="22" />
+  </svg> -->
+
+
+
+<!-- <div class="connecter">
+  <form action="/client" method="get">
+    <svg class="draw svg" id="login" xmlns="http://www.w3.org/2000/svg" viewbox="0 3 40 40" width="30" height="30" fill="#aaa" >
+      <ellipse cx="20" cy="13" rx="3"ry="5"/>
+      <path d="M10,35 Q10,25 20,24 Q31,25 30,35 Z"/>
+    </svg>
+    <input type=" text" name="nom" value="">
+    <input type=" text" name="nom" value="">
+  </form>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<!-- <svg width="150" height="100" fill="none" stroke="#FAD7A0" stroke-width="2">
+          <defs>
+            <g id="ver">
+              <circle cx="50" cy="21" r="4" stroke="none" fill="#FAD7A0 " />
+              <path d="M15,60 a1,1 0 1,1 70,0" stroke="none" fill="#FAD7A0 " />
+              <line x1="10" y1="70" x2="90" y2="70" stroke="#2d2d2d" />
+            </g>
+
+          </defs>
+                <path d="M15,30 L15,45 Q15,50 30,50 45,50 45,45 L45,30" stroke="none" fill="#FAD7A0 " />
+                <path d="M10,10 L10,50 Q10,55 25,55 50,55 50,50 L50,10 M30,55 L30,70 M25,70 L35,70" fill="none" stroke="#2d2d2d" />
+          <use x="190" y="0" xlink:href="#plat"/>
+          <use x="50" y="0" xlink:href="#ver"/>
+        </svg> -->
+
+
+<!-- <g id="nane" >
+  <path d="M17,47 L50,10 83,47 " />
+  <path d="M30,58 L50,35 70,58"/>
+  <path fill="#FAD7A0 " stroke="none" d="M50,55 L40,66 50,75 60,66 " />
+</g> -->
+
+<!-- <!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Tile</li>
+        <li>
+          <ul>
+            <li>Menu</li>
+            <li>Aide</li>
+            <li>
+              <svg class="draw svg" id="contact" xmlns="http://www.w3.org/2000/svg" viewbox="0 -7 50 20" fill="none" stroke="#aaa" stroke-width="3" width="30" height="20">
+                <circle cx="30" cy="7" r="7" />
+                <path d="M25,11 L15,20"/>
+              </svg>
+              <input type="search" name="" value="">
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <svg class="draw svg" id="login" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 40 40" width="40" height="40" fill="none" stroke="#aaa" stroke-width="3" >
+      <ellipse cx="20" cy="13" rx="3"ry="5"/>
+      <path d="M10,35 Q10,25 20,24 Q31,25 30,35 Z"/>
+    </svg>
+  </body>
+</html> -->

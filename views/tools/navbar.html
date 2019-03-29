@@ -1,0 +1,45 @@
+{% macro navbar(href, choix, nonchoix, active) %}
+<div id="navbar">
+  <div id="responsive">
+    <ul>
+      <li><a id="title" style="color: #7cd3f3;" href="/">NEMANA</a></li>
+      <li><a id="hover" href="#"><span></span><span></span><span></span></a></li>
+    </ul>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="{{ href }}">ACCUEIL</a></li>
+      <li><a href="#">BESION D'AIDE</a></li>
+      <li><a id="title" style="color: #7cd3f3;" href="/">NEMANA</a></li>
+      {% if active != true %}
+      <li><a id="registre" href="/register/{{ choix }}/#form">S'INSCRIRE</a></li>
+      <li><a id="connect" href="#">SE CONNECTER</a></li>
+      {% endif %}
+      {% if active == true %}
+      <li><a id="registre" href="/register/{{ choix }}/#form">S'INSCRIRE</a></li>
+      <li><a id="logout" href="/logout">SE DECONNECTER</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+  <div id="choix">
+    <ul>
+      <li><a href="/">CLIENT</a></li>
+      <li><a href="/restaurateur">RESTAURATEUR</a></li>
+    </ul>
+  </div>
+  <div id="menu">
+    <ul>
+      <li><a href="{{ href }}">ACCUEIL</a></li>
+      <li><a href="#">AIDE</a></li>
+      {% if active != true %}
+      <li><a id="registre" href="/register/ {{ choix }}">S'INSCRIRE</a></li>
+      <li><a id="connect" href="#">SE CONNECTER</a></li>
+      {% endif %}
+      {% if active == true %}
+      <li><a id="registre" href="/register/ {{ choix }}">S'INSCRIRE</a></li>
+      <li><a id="logout" href="/logout">SE DECONNECTER</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/presentation_resto.css">
+    <link rel="stylesheet" href="/css/tools/normalize.min.css">
+  </head>
+  <body>
+    <div id="main">
+      <div id="header">
+        <nav>
+          <ul id="nav">
+            <li id="first">
+              <il id="logo">
+                  <a href="/"><img src="/image/livreur_garcon.png" alt="logo"></a>
+              </il>
+              <ul id="menu">
+                <li><a href="/">ACCUEIL</a></li>
+                <li><a id="connect" href="#">SE CONNECTER</a></li>
+                <li><a id="register" href="#">S'INSCRIRE</a></li>
+                <li><a href="/">NOS MENUS</a></li>
+              </ul>
+            </li>
+            <li id="second">
+                <li id="drop">
+                  <a href="#">
+                  <svg width="30" height="30" fill='none' stroke='#aaa' stroke-width='1'>
+                    <path d="M15,3 L15,27 m-7,-5 l7,5 7,-5" >
+                  </svg>
+                </a>
+              </li>
+            </li>
+          </ul>
+        </nav>
+        <div id="wrapper">
+          <div id="appreciation">
+            <div class="likes">
+              <span id="numb">12</span>
+              <svg width='20' height='20'>
+                <ellipse cx=10 cy=10 rx=7 ry=5.5 />
+                <path d='M5,12.5 L1.5, 17 8,14.5'/>
+              </svg>
+            </div>
+            <div class="cmts">
+              <span id="numb">12</span>
+              <svg width="20" height="20">
+                <rect x="3" y="8" width="3" height="8"/>
+                <path d="M3,8 Q10,9 12,1 15,2 14,6 L15.5,6 18,6 Q20,8 17,16 15,17 6,16"/>
+              </svg>
+            </div>
+          </div>
+          <div id="presentation">
+            <div id="photo">
+              La photo du resto
+            </div>
+            <div id="description">
+              un peu de description
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="rechercher">
+        <h2>Commandez Vos Repas</h2>
+        <form id="commandez">
+          <div id="comande">
+            <input list="repas" type="text" name="" placeholder="Repas">
+            <datalist id="repas">
+              <option class="option" id="lerepas">Aloco</option>
+            </datalist>
+            <input type="text" list="prix" id="leprix"  name="" value="0">
+            <datalist id="prix">
+              <option class="option">1000</option>
+            </datalist>
+          </div>
+          <button type="submit" name="button">Commandez</button>
+        </form>
+      </div>
+      <div id="commentaires">
+        <h2>Appreciez Le Restaurant</h2>
+        <div class="lesappreciations">
+          <form method="post">
+            <textarea name="commentaire" rows="8" cols="80"></textarea>
+            <button type="submit" name="postez">Postez</button>
+          </form>
+          <div id="lescommentaires">
+            <div class="commentaire">
+              <div class="entete">
+                <svg width='50' height='50'>
+                  Ma Photo
+                </svg>
+                <span>Mon Nom</span>
+              </div>
+              <div class="corps">
+                Mon Commentaire à ecrire
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

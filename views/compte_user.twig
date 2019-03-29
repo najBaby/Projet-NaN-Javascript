@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/compte_user.css">
+    <link rel="stylesheet" href="/css/tools/normalize.min.css">
+  </head>
+  <body>
+    <div id="main">
+      <div id="header">
+        <nav>
+          <ul id="nav">
+            <li id="first">
+              <il id="logo">
+                  <a href="/"><img src="/image/livreur_garcon.png" alt="logo"></a>
+              </il>
+              <ul id="menu">
+                <li><a href="/">ACCUEIL</a></li>
+
+                <li><a id="register" href="#">S'INSCRIRE</a></li>
+              </ul>
+            </li>
+            <li id="second">
+                <!-- <li><a href="#"><img src="/image/chef.jpg" alt=""></a></li> -->
+                <li id="user"><a href="#"></a></li>
+                <li id="drop"><a href="#">
+                  <svg width="30" height="30" fill='none' stroke='#aaa' stroke-width='1'>
+                    <path d="M15,3 L15,27 m-7,-5 l7,5 7,-5" >
+                  </svg>
+                </a></li>
+            </li>
+          </ul>
+        </nav>
+        <div id="wrapper">
+          <div id="order">
+            <div class="field">
+              <div id="map" style="width:100%;height:400px;"></div>
+            </div>
+            <div class="field"></div>
+            <div class="field"></div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+      </div>
+      <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhVCZkrIzj8RwI49MGL8ynyCnAv-QHnZc&callback=initMap"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- AIzaSyC9cm8TJ13YjidPOT_yYxhTJVE9Q8IBGdk -->

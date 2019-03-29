@@ -1,0 +1,132 @@
+#wrapper, #header, #header form, #header p, #top, #restos {
+  display: flex;
+}
+
+#wrapper, #header, #top, #restos {
+  width: 100%;
+}
+
+#header {
+  background: rgb(215, 247, 255);
+  /* background: #79d0f2; */
+  /* background: #7cd3f3; */
+  /* background: #93b4bb; */
+  height: 30vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  background: url("/image/icon-title.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+
+#wrapper h1 {
+  width: 100%;
+  color: #7cd3f3;
+  display: flex;
+  font-family: arial;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+
+#header input {
+  width: 120px;
+  height: 50px;
+  margin: 5px;
+  padding-left: 3px;
+}
+
+#header button {
+  width: 80px;
+  height: 50px;
+  margin: 5px;
+  color: #fff;
+  font-weight: 600;
+  background: #7cd3f3;
+}
+
+#header svg {
+  margin-left: 4px;
+}
+
+#header p {
+  justify-content: center;
+  font-size: 14px;
+  color: #666;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+#header form{
+  position: relative;
+  top: 10px;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+#top {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.resto {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 418px;
+  height: 50vh;
+  margin: 5px;
+  background-image: url("/image/leckford.png");
+  background-color: #e9e7e2;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#restos {
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-flow: row wrap;
+}
+
+.resto svg {
+  margin-left: 5px;
+}
+
+#r1 {
+
+}
+
+
+@media screen and (max-width: 660px) {
+  .resto {
+      width: 500px;
+      height: 40vh;
+  }
+
+  #header h1 {
+    font-size: 16px;
+  }
+
+  #header p {
+    font-size: 10px;
+  }
+
+  #top h1 {
+    font-size: 18px;
+  }
+
+}
